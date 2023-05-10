@@ -1,0 +1,166 @@
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>Order Form</title> 
+    <!--CSAD--MANLOGON-AARON-VINCENT-B.-->
+    <!--ORDERFORM-->
+    <link rel="stylesheet" type="text/css" href="MANLOGON_IMAGES_CSAD/style.css">
+</head>
+<body>
+  <form method="post">
+  <table>
+    <tr>
+      <th colspan="2">Customer Information</th>
+    </tr>
+    <tr>
+      <td><label for="fname">First name:</label></td>
+      <td><input type="text" name="fname" placeholder="Type here your first name"></td>
+    </tr>
+    <tr>
+      <td><label for="lname">Last name:</label></td>
+      <td><input type="text" name="lname" placeholder="Type here your last name"></td>
+    </tr>
+    <tr>
+      <td><label for="address">Address:</label></td>
+      <td><input type="text" name="address" placeholder="Type here your address"></td>
+    </tr>
+      <td><label for="desc">Description:</label></td>
+    <td><textarea rows="10" cols="30" required></textarea></td>
+    <tr>
+  </table>
+    <br>
+
+  <table>
+    <tr>
+      <th colspan="2">Order Form</th>
+    </tr>
+    <tr>
+      <td><label for="patty">Burger Patty:</label></td>
+      <td>
+        <input type="radio" id="single" name="patty" value="single" CHECKED>
+          <label for="male">Single Patty</label><br>
+        <input type="radio" id="double" name="patty" value="double">
+          <label for="female">Double Patty</label><br>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="burgers">Choice of Buns:</label></td>
+      <td>
+        <input type="radio" id="white" name="bun" value="white" CHECKED>
+          <label for="male">White Bun</label><br>
+        <input type="radio" id="honey" name="bun" value="honey">
+          <label for="female">Honey Oat Bun</label><br>
+        <input type="radio" id="sugar" name="bun" value="sugar">
+          <label for="female">Sugar-free Bun</label><br>
+      </td>
+    </tr>
+    <tr>
+      <td>Add-ons:</td>
+      <td>
+          <input type="checkbox" id="feature1" name="feature1" value="cheese">
+          <label for="feature1">Cheese</label><br>
+       
+          <input type="checkbox" id="feature2" name="feature2" value="coleslaw">
+          <label for="feature2">Coleslaw</label><br>
+        
+          <input type="checkbox" id="feature3" name="feature3" value="tomato">
+          <label for="feature3">Tomato</label><br>
+        
+          <input type="checkbox" id="feature4" name="feature4" value="onion">
+          <label for="feature4">Onion</label><br>
+        
+          <input type="checkbox" id="feature5" name="feature5" value="cucumber">
+          <label for="feature5">Cucumber</label><br>
+        
+          <input type="checkbox" id="feature6" name="feature6" value="bacon">
+          <label for="feature6">Bacon</label><br>
+        </td>
+    </tr>
+    <br>
+    
+    <tr>
+      <td><label for="qty">Quantity:</label></td>
+        <td><input type="text" name="qty" placeholder="Type here the quantity"></td>
+    </tr>
+    <br>
+    
+    <tr>
+      <td>Pasta:</td>
+      <td>
+          <input type="checkbox" id="feature1" name="feature1" value="carbonara">
+          <label for="feature1">Carbonara</label><br>
+       
+          <input type="checkbox" id="feature2" name="feature2" value="pesto">
+          <label for="feature2">Pesto</label><br>
+        
+          <input type="checkbox" id="feature3" name="feature3" value="spag">
+          <label for="feature3">Spaghetti</label><br>
+        
+          <input type="checkbox" id="feature6" name="feature6" value="buc">
+          <label for="feature6">Bucatini</label><br>
+        
+          <input type="checkbox" id="feature4" name="feature4" value="xcheese">
+          <label for="feature4">Extra Cheese</label><br>
+        
+          <input type="checkbox" id="feature5" name="feature5" value="xsauce">
+          <label for="feature5">Extra Sauce</label><br>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="fries">Fries</label></td>
+        <td>
+          <select name="fries" id="fsize" size="1">
+            <option value="small">Small</option>
+            <option value="regular" SELECTED>Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </td>
+    </tr>
+    <tr>
+      <td>Flavor:</td>
+      <td>
+        <input type="radio" id="bbq" name="flavor" value="bbq">
+          <label for="male">BBQ</label><br>
+        <input type="radio" id="ch" name="flavor" value="ch">
+          <label for="female">Cheese</label><br>
+        <input type="radio" id="sc" name="flavor" value="sc">
+          <label for="female">Sour Cream</label><br>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="qty2">Quantity:</label></td>
+        <td><input type="text" name="qty2" placeholder="Type here the quantity"></td>
+    </tr>
+    <tr>
+      <td>Drinks:</td>
+      <td>
+          <select name="drinks" id="fsize" size="1">
+            <option value="d1" SELECTED>Cola</option>
+            <option value="d2">Sprite</option>
+            <option value="d3">Coke Zero</option>
+            <option value="d4">Royal</option>
+            <option value="d5">Water</option>
+          </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="sz">Size:</label></td>
+        <td>
+          <select name="sz" id="dsize" size="1">
+            <option value="small">Small</option>
+            <option value="reg" SELECTED>Regular</option>
+            <option value="large">Large</option>
+          </select>
+        </td>
+    </tr>
+    
+    <tr>
+      <td><label for="qty">Quantity:</label></td>
+        <td><input type="text" name="qty" placeholder="Type here the quantity"></td>
+    </tr>
+    
+    <tr>
+        <td colspan="2"><input type="submit" id="btn1" value="Submit"></td>
+    </tr>
+</body>
+</html>
