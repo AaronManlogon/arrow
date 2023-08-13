@@ -229,7 +229,7 @@ hr.feature{
   position: absolute;
   top:50%;
   left: 0;
-  width: 140px;
+  width: 150px;
   transform: translateY(-50%);
 }
 .button2:hover {
@@ -241,7 +241,7 @@ hr.feature{
 .button2__text {
 	display: inline-flex;
 	align-items: center;
-	padding: 0 44px;
+	padding: 0 52px;
 	color: #FFF;
 	height: 100%;
 }
