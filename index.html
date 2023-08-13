@@ -6,6 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://kit.fontawesome.com/b62a9c6413.js" crossorigin="anonymous"></script>
+	<script>
+		function myFunction() {
+		window.location.reload();
+		}
+	</script>
 </head>
 <body>
 	<div>
@@ -18,9 +23,9 @@
 			<img src="ArrowLogo.png">
 			<ul class="menu">
 				<hr>
-				<li><a class="active" href="index.html">Home</a></li>
-				<li><a href="index.html#feature">Features</a></li>
-				<li><a href="index.html#download">Download</a></li>
+				<li><a class="active" onclick="myFunction()" href="index.html">Home</a></li>
+				<li><a onclick="myFunction()" href="index.html#feature">Features</a></li>
+				<li><a onclick="myFunction()" href="index.html#download">Download</a></li>
 				<li><a href="#">About us</a></li>
 				<li><a href="#">Support</a></li>
 			</ul>
@@ -43,7 +48,7 @@
 	
 	<div>
 		<br><br>
-		<img class="preview" id="download" src="preview.png">
+		<img class="preview" src="preview.png" id="download">
 	</div>
 	
 	<div class="container" id="bot">
