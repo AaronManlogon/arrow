@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 hr{
 	border: 1px solid white;
 	display: none;
@@ -140,7 +141,7 @@ i#btn, i#cancel{
 	width:100%;
 	height:auto;
 }
-.preview {
+.preview, .features {
 	width:100%;
 	height:auto;
 }
@@ -182,10 +183,10 @@ p {
 	cursor: pointer;
 }
 .button:hover {
-	background: #008168;
+	background: #298124;
 }
 .button:active {
-	background: #006e58;
+	background: #256F21;
 }
 .button__text, .button__icon {
 	display: inline-flex;
@@ -201,4 +202,46 @@ p {
 hr.feature{
 	border: 1px solid #b9b9b9;
 	display: block;
+}
+.terms h1{
+	font-size: 24px;
+	text-align: left;
+	margin-left: 30px;
+}
+.terms p{
+	margin-left: 60px;
+}
+.button2 {
+	display: inline-flex;
+	height: 50px;
+	padding: 0;
+	background: #206DC6;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	overflow: hidden;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+}
+.button2{
+  position: absolute;
+  top:50%;
+  left: 0;
+  width: 140px;
+  transform: translateY(-50%);
+}
+.button2:hover {
+	background: #174E8C;
+}
+.button2:active {
+	background: #17477E;
+}
+.button2__text {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 44px;
+	color: #FFF;
+	height: 100%;
 }
