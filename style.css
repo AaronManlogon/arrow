@@ -215,7 +215,7 @@ hr.feature{
 	display: inline-flex;
 	height: 50px;
 	padding: 0;
-	background: #206DC6;
+	background: #31A02B;
 	border: none;
 	outline: none;
 	border-radius: 5px;
@@ -233,10 +233,10 @@ hr.feature{
   transform: translateY(-50%);
 }
 .button2:hover {
-	background: #174E8C;
+	background: #298124;
 }
 .button2:active {
-	background: #17477E;
+	background: #256F21;
 }
 .button2__text {
 	display: inline-flex;
