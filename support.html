@@ -5,6 +5,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://kit.fontawesome.com/b62a9c6413.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+        }
+
+        form {
+			margin: 0 auto;
+            width: 80%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        label, input, textarea {
+			margin: 0 auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+			margin: 0 auto;
+			display: block;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+	</style>
 </head>
 <body>
 	<div>
@@ -25,6 +67,22 @@
 			</ul>
 		</nav>
 	</div>
+	<br><br><br><br><br><br><br>
+	<h1>Contact Us</h1>
 	
+	<div class="contact">
+	<form action="send_email.php" method="post">
+		<label for="name"><p>Name:</label>
+		<input type="text" id="name" name="name" required></p><br>
+
+		<label for="email"><p>Email:</label>
+		<input type="email" id="email" name="email" required></p><br>
+		<br>
+		<label for="message"><p>Message:</label>
+		<textarea id="message" name="message" rows="4" required></textarea></p><br>
+
+		<input style="float:center" type="submit" value="Send Message">
+	</form>
+	</div>
 </body>
 </html>
