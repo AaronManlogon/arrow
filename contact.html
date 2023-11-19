@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/b62a9c6413.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+
+        nav {
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background: #720000;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        nav img {
+            width: 100px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+            padding: 20px;
+            margin: 20px 20px 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        label, input, textarea {
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input, textarea {
+            font-family: 'Roboto', sans-serif;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            margin: 20px auto 0;
+            display: block;
+            background-color: #c51f1f;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px; /* Added font size */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #720000;
+        }
+
+        #confirm-button-container {
+            text-align: center;
+        }
+
+        ::placeholder {
+            color: #979797;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav id="top">
+            <input type="checkbox" id="check" size="1">
+            <label for="check">
+                <i class="fa-solid fa-bars" id="btn"></i>
+                <i class="fa-solid fa-times" id="cancel"></i>
+            </label>
+            <img src="ArrowLogo.png">
+            <ul class="menu">
+                <hr>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="index.html#download">Download</a></li>
+                <li><a href="index.html#feature">Features</a></li>
+                <li><a href="tc.html">Terms & Conditions</a></li>
+                <li><a href="support.html">Help</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br><br><br><br><br><br>
+
+    <h1>Contact Us</h1>
+
+    <div class="container">
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="Name" required oninput="enableConfirmButton()">
+
+            <input type="email" id="email" name="email" placeholder="Email" required oninput="enableConfirmButton()">
+
+            <textarea id="message" name="message" rows="4" placeholder="Message" required oninput="enableConfirmButton()"></textarea>
+
+            <div id="confirm-button-container">
+                <button id="confirm-button" disabled onclick="submitForm()">Confirm</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function enableConfirmButton() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            var confirmButton = document.getElementById('confirm-button');
+            confirmButton.disabled = !(name && email && message);
+        }
+
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'email.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    console.log(xhr.responseText);
+                    alert("Message sent successfully!");
+                }
+            };
+
+            var data = 'name=' + encodeURIComponent(name) +
+                       '&email=' + encodeURIComponent(email) +
+                       '&message=' + encodeURIComponent(message);
+            
+            xhr.send(data);
+        }
+    </script>
+</body>
+</html>
