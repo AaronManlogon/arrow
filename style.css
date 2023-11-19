@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+#confirm-button-container {
+    text-align: center;
+}
 
+#confirm-button {
+    font-size: 16px;
+    padding: 14px 28px;
+    background-color: #31A02B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#confirm-button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#confirm-button:hover {
+    background-color: #256F21;
+}
 hr{
 	border: 1px solid white;
 	display: none;
