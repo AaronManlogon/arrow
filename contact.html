@@ -43,7 +43,7 @@
         }
 
         textarea {
-            resize: vertical;
+            resize: none;
         }
 
         input[type="submit"] {
@@ -55,7 +55,7 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 16px; /* Added font size */
         }
 
         input[type="submit"]:hover {
@@ -95,13 +95,15 @@
 
     <h1>Contact Us</h1>
 
+	<br><br>
     <div class="container">
         <form id="contactForm">
             <input type="text" id="name" name="name" placeholder="Name" required oninput="enableConfirmButton()">
 
             <input type="email" id="email" name="email" placeholder="Email" required oninput="enableConfirmButton()">
 
-            <textarea id="message" name="message" rows="4" placeholder="Message" required oninput="enableConfirmButton()"></textarea>
+            <textarea id="message" name="message" rows="8" cols="50" placeholder="Message" required oninput="enableConfirmButton()"></textarea>
+
 
             <div id="confirm-button-container">
                 <button id="confirm-button" disabled onclick="submitForm()">Confirm</button>
