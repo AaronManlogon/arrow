@@ -8,16 +8,44 @@
 </head>
 <body>
 	<script type="module">
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+		import { getDownloadURL, getStorage, ref } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js";
 
-		const downloadAPK = document.getElementById("downloadAPK");
-		const anchor = document.createElement("a");
-		anchor.href = "ArrowLogo.png";
-		anchor.download = "";
-		anchor.style.display = "none";
-		downloadAPK.addEventListener("click", ()=>{
-			document.body.appendChild(anchor);
-			anchor.click();
-			document.body.removeChild(anchor);
+		const firebaseConfig = {
+			apiKey: "AIzaSyAELRmuJ6ypK5t3_fHXB7MBpIFBLpCkl24",
+			authDomain: "arrow-51e15.firebaseapp.com",
+			databaseURL: "https://arrow-51e15-default-rtdb.asia-southeast1.firebasedatabase.app",
+			projectId: "arrow-51e15",
+			storageBucket: "arrow-51e15.appspot.com",
+			messagingSenderId: "954686804397",
+			appId: "1:954686804397:web:c9b91e7659430d16129124",
+			measurementId: "G-0QM943SE3X"
+		};
+
+		// Initialize Firebase
+		const app = initializeApp(firebaseConfig);
+
+		const storage = getStorage();
+		const apkRef = ref(storage, 'public/UEManila.jpg');
+		const downloadAPK = document.getElementById('downloadAPK');
+		downloadAPK.addEventListener('click', () =>{
+			getDownloadURL(apkRef).then((url) => {
+				console.log('Download URL:', url);
+
+				const anchor = document.createElement('a');
+				anchor.href = url;
+				anchor.download = "";
+				anchor.style.display = 'none';
+
+				// Append the anchor to the document
+				document.body.appendChild(anchor);
+
+				// Trigger a click on the anchor element to initiate the download
+				anchor.click();
+				document.body.removeChild(anchor);
+			}).catch((error) =>{
+				console.error('Error getting download URL:', error);
+			});
 		});
 	</script>
 	<div>
